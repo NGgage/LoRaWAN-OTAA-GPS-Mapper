@@ -78,7 +78,7 @@ function decodeUplink(input) {
       data: decoded
     }
 }
-
+```
 
 Let me know if more detailed instructions are needed.
 
