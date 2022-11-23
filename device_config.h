@@ -2,10 +2,10 @@
 
 
 // uncomment to use OTAA instead of ABP
-//#define USE_OTAA 1
+#define USE_OTAA 1
 
 
-// UPDATE WITH YOUR DEVICE TTN SECRETS
+// UPDATE WITH YOUR DEVICE TTN SECRETS                                               // Generate in Chirpstack
 #ifdef USE_OTAA
 static PROGMEM u1_t DEVEUI[8]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // Device EUI, hex, lsb
 static PROGMEM u1_t APPEUI[8]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // Application EUI, hex, lsb

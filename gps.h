@@ -5,8 +5,8 @@
 #include <HardwareSerial.h>
 
 
-#define GPS_TX 12
-#define GPS_RX 15
+#define GPS_TX 34
+#define GPS_RX 12
 
 
 class gps
