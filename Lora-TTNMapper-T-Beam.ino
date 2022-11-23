@@ -1,5 +1,5 @@
 // If you are in USA on a 915Mhz network instead of an european / 868 Mhz one,
-//   you MUST modify the arduino lmic library "config.h" to enable CFG_us915 instead of CFG_eu868.
+// You MUST modify the arduino lmic library "config.h" to enable CFG_us915 instead of CFG_eu868.
 // That "config.h" should be in the same folder as the "lmic.h" file in your arduino folders.
 #include <lmic.h>
 #include <hal/hal.h>
@@ -13,7 +13,7 @@
 
 // T-Beam specific hardware
 #undef BUILTIN_LED
-#define BUILTIN_LED 21
+#define BUILTIN_LED 4
 
 char s[32]; // used to sprintf for Serial output
 uint8_t txBuffer[9];
@@ -35,7 +35,7 @@ const unsigned TX_INTERVAL = 120;
 const lmic_pinmap lmic_pins = {
   .nss = 18,
   .rxtx = LMIC_UNUSED_PIN,
-  .rst = LMIC_UNUSED_PIN, // was "14,"
+  .rst = 23 LMIC_UNUSED_PIN, // was "14,"
   .dio = {26, 33, 32},
 };
 
