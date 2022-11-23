@@ -100,7 +100,7 @@ void onEvent (ev_t ev) {
       break;
     case EV_JOINED:
       Serial.println(F("EV_JOINED"));
-#ifdef USE_OTAA    
+#ifdef USE_OTAA
       otaaDevAddr = LMIC.devaddr;
       memcpy_P(otaaNetwKey, LMIC.nwkKey, 16);
       memcpy_P(otaaApRtKey, LMIC.artKey, 16);
@@ -194,7 +194,7 @@ void setup() {
   Serial.println(F("TTN Mapper"));
   
   //Turn off WiFi and Bluetooth
-  WiFi.mode(WIFI_OFF);
+  WiFi.mode(WIFI_OFF);  // This will be changed to AP mode
   btStop();
   gps.init();
 
@@ -210,6 +210,7 @@ void setup() {
   {
     LMIC_setSession(0x1, otaaDevAddr, otaaNetwKey, otaaApRtKey);
   }
+  LMIC.dn2Dr = DR_SF9; // Change to use SF9
 #else // ABP
   LMIC_setSession (0x1, DEVADDR, NWKSKEY, APPSKEY);
 
