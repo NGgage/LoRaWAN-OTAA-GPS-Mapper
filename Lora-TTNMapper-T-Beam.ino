@@ -15,7 +15,7 @@
 #undef BUILTIN_LED
 #define BUILTIN_LED 4
 
-char s[32]; // used to sprintf for Serial output
+char s[32]; // used to sprintf for Serial output idk
 uint8_t txBuffer[9];
 gps gps;
 static osjob_t sendjob;
